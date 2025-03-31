@@ -1,0 +1,428 @@
+PS C:\Users\davi.barros> docker container -it --name exercicio ubuntu sh
+unknown shorthand flag: 'i' in -it
+See 'docker container --help'.
+
+Usage:  docker container COMMAND
+
+Manage containers
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  exec        Execute a command in a running container
+  export      Export a container's filesystem as a tar archive
+  inspect     Display detailed information on one or more containers
+  kill        Kill one or more running containers
+  logs        Fetch the logs of a container
+  ls          List containers
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  prune       Remove all stopped containers
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  run         Create and run a new container from an image
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  wait        Block until one or more containers stop, then print their exit codes
+
+Run 'docker container COMMAND --help' for more information on a command.
+
+PS C:\Users\davi.barros> docker run -it --name exercicio ubuntu sh
+
+# ls
+bin   dev  home  lib64  mnt  proc  run   srv  tmp  var
+boot  etc  lib   media  opt  root  sbin  sys  usr
+# apt-get nginx
+E: Invalid operation nginx
+# sudo apt update
+sh: 3: sudo: not found
+# apt update
+Get:1 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB]
+Get:2 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Get:3 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+Get:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+Get:5 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [309 kB]
+Get:6 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [12.7 kB]
+Get:7 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [335 kB]
+Get:8 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [370 kB]
+Get:9 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB]
+Get:10 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB]
+Get:11 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB]
+Get:12 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB]
+Get:13 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [309 kB]
+Get:14 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [441 kB]
+Get:15 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [431 kB]
+Get:16 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [16.9 kB]
+Get:17 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [11.5 kB]
+Fetched 24.4 MB in 7s (3523 kB/s)                                n
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+4 packages can be upgraded. Run 'apt list --upgradable' to see them.
+#
+sh: 5: apd: not found
+# apt install nginx
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  iproute2 krb5-locales libatm1t64 libbpf1 libcap2-bin
+  libelf1t64 libgssapi-krb5-2 libk5crypto3 libkeyutils1
+  libkrb5-3 libkrb5support0 libmnl0 libpam-cap libtirpc-common
+  libtirpc3t64 libxtables12 nginx-common
+Suggested packages:
+  iproute2-doc python3:any krb5-doc krb5-user fcgiwrap nginx-doc
+  ssl-cert
+The following NEW packages will be installed:
+  iproute2 krb5-locales libatm1t64 libbpf1 libcap2-bin
+  libelf1t64 libgssapi-krb5-2 libk5crypto3 libkeyutils1
+  libkrb5-3 libkrb5support0 libmnl0 libpam-cap libtirpc-common
+  libtirpc3t64 libxtables12 nginx nginx-common
+0 upgraded, 18 newly installed, 0 to remove and 4 not upgraded.
+Need to get 2733 kB of archives.
+After this operation, 8057 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Abort.
+# ^[[A : not found
+# apt install nginx
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  iproute2 krb5-locales libatm1t64 libbpf1 libcap2-bin
+  libelf1t64 libgssapi-krb5-2 libk5crypto3 libkeyutils1
+  libkrb5-3 libkrb5support0 libmnl0 libpam-cap libtirpc-common
+  libtirpc3t64 libxtables12 nginx-common
+Suggested packages:
+  iproute2-doc python3:any krb5-doc krb5-user fcgiwrap nginx-doc
+  ssl-cert
+The following NEW packages will be installed:
+  iproute2 krb5-locales libatm1t64 libbpf1 libcap2-bin
+  libelf1t64 libgssapi-krb5-2 libk5crypto3 libkeyutils1
+  libkrb5-3 libkrb5support0 libmnl0 libpam-cap libtirpc-common
+  libtirpc3t64 libxtables12 nginx nginx-common
+0 upgraded, 18 newly installed, 0 to remove and 4 not upgraded.
+Need to get 2733 kB of archives.
+After this operation, 8057 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libelf1t64 amd64 0.190-1.1build4 [57.6 kB]
+Get:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libbpf1 amd64 1:1.3.0-2build2 [166 kB]
+Get:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libmnl0 amd64 1.0.5-2build1 [12.3 kB]
+Get:4 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libkrb5support0 amd64 1.20.1-6ubuntu2.1 [33.6 kB]
+Get:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libk5crypto3 amd64 1.20.1-6ubuntu2.1 [81.7 kB]
+Get:6 http://archive.ubuntu.com/ubuntu noble/main amd64 libkeyutils1 amd64 1.6.3-3build1 [9490 B]
+Get:7 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libkrb5-3 amd64 1.20.1-6ubuntu2.1 [347 kB]
+Get:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgssapi-krb5-2 amd64 1.20.1-6ubuntu2.1 [143 kB]
+Get:9 http://archive.ubuntu.com/ubuntu noble/main amd64 libtirpc-common all 1.3.4+ds-1.1build1 [8094 B]
+Get:10 http://archive.ubuntu.com/ubuntu noble/main amd64 libtirpc3t64 amd64 1.3.4+ds-1.1build1 [82.6 kB]
+Get:11 http://archive.ubuntu.com/ubuntu noble/main amd64 libxtables12 amd64 1.8.10-3ubuntu2 [35.7 kB]
+Get:12 http://archive.ubuntu.com/ubuntu noble/main amd64 libcap2-bin amd64 1:2.66-5ubuntu2 [34.5 kB]
+Get:13 http://archive.ubuntu.com/ubuntu noble/main amd64 iproute2 amd64 6.1.0-1ubuntu6 [1120 kB]
+Get:14 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 krb5-locales all 1.20.1-6ubuntu2.1 [14.0 kB]
+Get:15 http://archive.ubuntu.com/ubuntu noble/main amd64 libatm1t64 amd64 1:2.5.1-5.1build1 [22.9 kB]
+Get:16 http://archive.ubuntu.com/ubuntu noble/main amd64 libpam-cap amd64 1:2.66-5ubuntu2 [12.4 kB]
+Get:17 http://archive.ubuntu.com/ubuntu noble/main amd64 nginx-common all 1.24.0-2ubuntu7 [31.2 kB]
+Get:18 http://archive.ubuntu.com/ubuntu noble/main amd64 nginx amd64 1.24.0-2ubuntu7 [521 kB]
+Fetched 2733 kB in 6s (452 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package libelf1t64:amd64.
+(Reading database ... 4376 files and directories currently installed.)
+Preparing to unpack .../00-libelf1t64_0.190-1.1build4_amd64.deb ..
+.
+Unpacking libelf1t64:amd64 (0.190-1.1build4) ...
+Selecting previously unselected package libbpf1:amd64.
+Preparing to unpack .../01-libbpf1_1%3a1.3.0-2build2_amd64.deb ...
+Unpacking libbpf1:amd64 (1:1.3.0-2build2) ...
+Selecting previously unselected package libmnl0:amd64.
+Preparing to unpack .../02-libmnl0_1.0.5-2build1_amd64.deb ...
+Unpacking libmnl0:amd64 (1.0.5-2build1) ...
+Selecting previously unselected package libkrb5support0:amd64.
+Preparing to unpack .../03-libkrb5support0_1.20.1-6ubuntu2.1_amd64.deb ...
+Unpacking libkrb5support0:amd64 (1.20.1-6ubuntu2.1) ...
+Selecting previously unselected package libk5crypto3:amd64.
+Preparing to unpack .../04-libk5crypto3_1.20.1-6ubuntu2.1_amd64.deb ...
+Unpacking libk5crypto3:amd64 (1.20.1-6ubuntu2.1) ...
+Selecting previously unselected package libkeyutils1:amd64.
+Preparing to unpack .../05-libkeyutils1_1.6.3-3build1_amd64.deb ...
+Unpacking libkeyutils1:amd64 (1.6.3-3build1) ...
+Selecting previously unselected package libkrb5-3:amd64.
+Preparing to unpack .../06-libkrb5-3_1.20.1-6ubuntu2.1_amd64.deb ...
+Unpacking libkrb5-3:amd64 (1.20.1-6ubuntu2.1) ...
+Selecting previously unselected package libgssapi-krb5-2:amd64.
+Preparing to unpack .../07-libgssapi-krb5-2_1.20.1-6ubuntu2.1_amd6
+4.deb ...
+Unpacking libgssapi-krb5-2:amd64 (1.20.1-6ubuntu2.1) ...
+Selecting previously unselected package libtirpc-common.
+Preparing to unpack .../08-libtirpc-common_1.3.4+ds-1.1build1_all.deb ...
+Unpacking libtirpc-common (1.3.4+ds-1.1build1) ...
+Selecting previously unselected package libtirpc3t64:amd64.
+Preparing to unpack .../09-libtirpc3t64_1.3.4+ds-1.1build1_amd64.deb ...
+Adding 'diversion of /lib/x86_64-linux-gnu/libtirpc.so.3 to /lib/x
+86_64-linux-gnu/libtirpc.so.3.usr-is-merged by libtirpc3t64'
+Adding 'diversion of /lib/x86_64-linux-gnu/libtirpc.so.3.0.0 to /lib/x86_64-linux-gnu/libtirpc.so.3.0.0.usr-is-merged by libtirpc3t6
+4'
+Unpacking libtirpc3t64:amd64 (1.3.4+ds-1.1build1) ...
+Selecting previously unselected package libxtables12:amd64.
+Preparing to unpack .../10-libxtables12_1.8.10-3ubuntu2_amd64.deb ...
+Unpacking libxtables12:amd64 (1.8.10-3ubuntu2) ...
+Selecting previously unselected package libcap2-bin.
+Preparing to unpack .../11-libcap2-bin_1%3a2.66-5ubuntu2_amd64.deb ...
+Unpacking libcap2-bin (1:2.66-5ubuntu2) ...
+Selecting previously unselected package iproute2.
+Preparing to unpack .../12-iproute2_6.1.0-1ubuntu6_amd64.deb ...
+Unpacking iproute2 (6.1.0-1ubuntu6) ...
+Selecting previously unselected package krb5-locales.
+Preparing to unpack .../13-krb5-locales_1.20.1-6ubuntu2.1_all.deb
+...
+Unpacking krb5-locales (1.20.1-6ubuntu2.1) ...
+Selecting previously unselected package libatm1t64:amd64.
+Preparing to unpack .../14-libatm1t64_1%3a2.5.1-5.1build1_amd64.deb ...
+Unpacking libatm1t64:amd64 (1:2.5.1-5.1build1) ...
+Selecting previously unselected package libpam-cap:amd64.
+Preparing to unpack .../15-libpam-cap_1%3a2.66-5ubuntu2_amd64.deb
+...
+Unpacking libpam-cap:amd64 (1:2.66-5ubuntu2) ...
+Selecting previously unselected package nginx-common.
+Preparing to unpack .../16-nginx-common_1.24.0-2ubuntu7_all.deb ...
+Unpacking nginx-common (1.24.0-2ubuntu7) ...
+Selecting previously unselected package nginx.
+Preparing to unpack .../17-nginx_1.24.0-2ubuntu7_amd64.deb ...
+Unpacking nginx (1.24.0-2ubuntu7) ...
+Setting up libkeyutils1:amd64 (1.6.3-3build1) ...
+Setting up libatm1t64:amd64 (1:2.5.1-5.1build1) ...
+Setting up libtirpc-common (1.3.4+ds-1.1build1) ...
+Setting up krb5-locales (1.20.1-6ubuntu2.1) ...
+Setting up libelf1t64:amd64 (0.190-1.1build4) ...
+Setting up libkrb5support0:amd64 (1.20.1-6ubuntu2.1) ...
+Setting up libcap2-bin (1:2.66-5ubuntu2) ...
+Setting up libmnl0:amd64 (1.0.5-2build1) ...
+Setting up libk5crypto3:amd64 (1.20.1-6ubuntu2.1) ...
+Setting up libxtables12:amd64 (1.8.10-3ubuntu2) ...
+Setting up libkrb5-3:amd64 (1.20.1-6ubuntu2.1) ...
+Setting up libpam-cap:amd64 (1:2.66-5ubuntu2) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialo
+g based frontend cannot be used. at /usr/share/perl5/Debconf/Front
+End/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to i
+nstall the Term::ReadLine module) (@INC entries checked: /etc/perl
+ /usr/local/lib/x86_64-linux-gnu/perl/5.38.2 /usr/local/share/perl
+/5.38.2 /usr/lib/x86_64-linux-gnu/perl5/5.38 /usr/share/perl5 /usr
+/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.3
+8 /usr/share/perl/5.38 /usr/local/lib/site_perl) at /usr/share/per
+l5/Debconf/FrontEnd/Readline.pm line 8.)
+debconf: falling back to frontend: Teletype
+Setting up libbpf1:amd64 (1:1.3.0-2build2) ...
+Setting up libgssapi-krb5-2:amd64 (1.20.1-6ubuntu2.1) ...
+Setting up libtirpc3t64:amd64 (1.3.4+ds-1.1build1) ...
+Setting up iproute2 (6.1.0-1ubuntu6) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialo
+g based frontend cannot be used. at /usr/share/perl5/Debconf/Front
+End/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl
+ /usr/local/lib/x86_64-linux-gnu/perl/5.38.2 /usr/local/share/perl
+/5.38.2 /usr/lib/x86_64-linux-gnu/perl5/5.38 /usr/share/perl5 /usr
+/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.3
+8 /usr/share/perl/5.38 /usr/local/lib/site_perl) at /usr/share/per
+l5/Debconf/FrontEnd/Readline.pm line 8.)
+debconf: falling back to frontend: Teletype
+Setting up nginx (1.24.0-2ubuntu7) ...
+invoke-rc.d: unknown initscript, /etc/init.d/nginx not found.
+invoke-rc.d: could not determine current runlevel
+Setting up nginx-common (1.24.0-2ubuntu7) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialo
+g based frontend cannot be used. at /usr/share/perl5/Debconf/Front
+End/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to i
+nstall the Term::ReadLine module) (@INC entries checked: /etc/perl
+ /usr/local/lib/x86_64-linux-gnu/perl/5.38.2 /usr/local/share/perl
+/5.38.2 /usr/lib/x86_64-linux-gnu/perl5/5.38 /usr/share/perl5 /usr
+/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.3
+8 /usr/share/perl/5.38 /usr/local/lib/site_perl) at /usr/share/per
+l5/Debconf/FrontEnd/Readline.pm line 8.)
+debconf: falling back to frontend: Teletype
+Processing triggers for libc-bin (2.39-0ubuntu8.2) ...
+# commit --help
+sh: 9: commit: not found
+# exit
+PS C:\Users\davi.barros> docker commit --help
+
+Usage:  docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]
+
+Create a new image from a container's changes
+
+Aliases:
+  docker container commit, docker commit
+
+Options:
+  -a, --author string    Author (e.g., "John Hannibal Smith
+                         <hannibal@a-team.com>")
+  -c, --change list      Apply Dockerfile instruction to the created image
+  -m, --message string   Commit message
+  -p, --pause            Pause container during commit (default true)
+PS C:\Users\davi.barros> docker commit teste ubuntu-allumy
+Error response from daemon: No such container: teste
+PS C:\Users\davi.barros> docker container ls -a
+CONTAINER ID   IMAGE     COMMAND   CREATED          STATUS                       PORTS     NAMES
+536ec2af7074   ubuntu    "sh"      18 minutes ago   Exited (127) 2 minutes ago             exercicio
+PS C:\Users\davi.barros> docker commit exercicio ubuntu-allumy
+sha256:53978ecb8b0a7ec3ad0f08aa4d30e77c692668add3a5abbbd6fe6457a841d531
+PS C:\Users\davi.barros> docker image ls
+REPOSITORY         TAG       IMAGE ID       CREATED         SIZE
+ubuntu-allumy      latest    53978ecb8b0a   5 seconds ago   126MB
+ubuntu-importado   latest    812ceb2bf9a5   5 days ago      78.1MB
+nginx-allumy-img   latest    6aaf65aa7d28   5 days ago      7.8MB
+alpine             latest    324bc02ae123   4 weeks ago     7.8MB
+nginx              latest    900dca2a61f5   2 months ago    188MB
+ubuntu             latest    35a88802559d   2 months ago    78.1MB
+davibuntu          latest    35a88802559d   2 months ago    78.1MB
+hello-world        latest    d2c94e258dcb   15 months ago   13.3kB
+PS C:\Users\davi.barros> docker image save -o ubuntu-allmy
+"docker image save" requires at least 1 argument.
+See 'docker image save --help'.
+
+Usage:  docker image save [OPTIONS] IMAGE [IMAGE...]
+
+Save one or more images to a tar archive (streamed to STDOUT by default)
+PS C:\Users\davi.barros> docker image save --help
+
+Usage:  docker image save [OPTIONS] IMAGE [IMAGE...]
+
+Save one or more images to a tar archive (streamed to STDOUT by default)
+
+Aliases:
+  docker image save, docker save
+
+Options:
+  -o, --output string   Write to a file, instead of STDOUT
+PS C:\Users\davi.barros> docker image save -o ubuntu-allumy.tar ubuntu-allumy
+PS C:\Users\davi.barros> ls
+
+
+    Diretório: C:\Users\davi.barros
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        19/08/2024     17:24                .chocolatey
+d-----        20/08/2024     11:15                .docker
+d-----        08/04/2024     16:47                .ms-ad
+d-----        02/08/2024     14:05                .pyenv
+d-----        20/08/2024     15:54                .VirtualBox
+d-----        14/04/2024     18:29                .vscode
+d-----        05/08/2024     15:55                Alluny
+d-----        19/08/2024     14:18                Bedrock_Vault
+d-----        05/08/2024     16:46                bkp
+d-----        14/08/2024     17:08                Cisco Packet
+                                                  Tracer 8.2.2
+d-r---        08/04/2024     16:35                Contacts
+d-----        14/04/2024     18:33                cosdigos
+d-r---        13/08/2024     23:01                Desktop
+d-----        09/08/2024     15:26                Documentos
+d-----        09/04/2024     15:02                Documents
+dar---        20/08/2024     14:24                Downloads
+d-r---        08/04/2024     16:35                Favorites
+d-----        19/07/2024     14:59                HikCentralClien
+                                                  t
+d-----        15/08/2024     15:54                imagens
+d-r---        08/04/2024     16:35                Links
+d-r---        08/04/2024     16:35                Music
+d-r---        08/04/2024     16:36                OneDrive
+dar--l        19/08/2024     09:10                OneDrive -
+                                                  Redisul
+                                                  Informatica
+                                                  Ltda
+d-r---        13/08/2024     18:03                Pictures
+d-r---        08/04/2024     16:35                Saved Games
+d-r---        08/04/2024     16:35                Searches
+d-----        11/08/2024     00:12                Sync
+d-----        07/08/2024     16:53                SyncTrayzorPort
+                                                  able-x64
+d-r---        15/08/2024     17:06                Videos
+d-----        20/08/2024     10:04                vimfiles
+d-----        20/08/2024     13:12                VirtualBox VMs
+-a----        14/08/2024     15:38            188 .packettracer
+-a----        20/08/2024     09:18            527 .vivaldi_report
+                                                  ing_data
+-a----        20/08/2024     10:30            156 Dockerfile.txt
+-a----        02/08/2024     14:05           5133 install-pyenv-w
+                                                  in.ps1
+-a----        13/08/2024     13:25          64631 printrun.log
+-a----        31/05/2024     13:48              0 Sti_Trace.log
+-a----        20/08/2024     16:41      128658432 ubuntu-allumy.t
+                                                  ar
+-a----        20/08/2024     11:05           1682 _viminfo
+
+
+PS C:\Users\davi.barros> rm ubuntu-allumy.tar
+PS C:\Users\davi.barros> cd imagens
+PS C:\Users\davi.barros\imagens> docker image save -o ubuntu-allumy.tar ubuntu-allumy
+PS C:\Users\davi.barros\imagens> docker image rm ubuntu-allumy
+Untagged: ubuntu-allumy:latest
+Deleted: sha256:53978ecb8b0a7ec3ad0f08aa4d30e77c692668add3a5abbbd6fe6457a841d531
+Deleted: sha256:c274a7e359a9ef39a2136d966769c3fa90c21b7a4aa56435faf1f5f3f5329a1b
+PS C:\Users\davi.barros\imagens> docker image ls
+REPOSITORY         TAG       IMAGE ID       CREATED         SIZE
+ubuntu-importado   latest    812ceb2bf9a5   5 days ago      78.1MB
+nginx-allumy-img   latest    6aaf65aa7d28   5 days ago      7.8MB
+alpine             latest    324bc02ae123   4 weeks ago     7.8MB
+nginx              latest    900dca2a61f5   2 months ago    188MB
+davibuntu          latest    35a88802559d   2 months ago    78.1MB
+ubuntu             latest    35a88802559d   2 months ago    78.1MB
+hello-world        latest    d2c94e258dcb   15 months ago   13.3kB
+PS C:\Users\davi.barros\imagens> docker image load --help
+
+Usage:  docker image load [OPTIONS]
+
+Load an image from a tar archive or STDIN
+
+Aliases:
+  docker image load, docker load
+
+Options:
+  -i, --input string   Read from tar archive file, instead of STDIN
+  -q, --quiet          Suppress the load output
+PS C:\Users\davi.barros\imagens> docker image load -i ubuntu-allumy.tar
+edb0b97ab379: Loading layer  48.08MB/48.08MB
+Loaded image: ubuntu-allumy:latest
+PS C:\Users\davi.barros\imagens> docker image ls
+REPOSITORY         TAG       IMAGE ID       CREATED         SIZE
+ubuntu-allumy      latest    53978ecb8b0a   4 minutes ago   126MB
+ubuntu-importado   latest    812ceb2bf9a5   5 days ago      78.1MB
+nginx-allumy-img   latest    6aaf65aa7d28   5 days ago      7.8MB
+alpine             latest    324bc02ae123   4 weeks ago     7.8MB
+nginx              latest    900dca2a61f5   2 months ago    188MB
+davibuntu          latest    35a88802559d   2 months ago    78.1MB
+ubuntu             latest    35a88802559d   2 months ago    78.1MB
+hello-world        latest    d2c94e258dcb   15 months ago   13.3kB
+PS C:\Users\davi.barros\imagens> cd..
+PS C:\Users\davi.barros> docker container run -it --name exercicioteste ubuntu-allumy
+# ls
+bin                etc    media  root                srv  var
+bin.usr-is-merged  home   mnt    run                 sys
+boot               lib    opt    sbin                tmp
+dev                lib64  proc   sbin.usr-is-merged  usr
+# cd
+# exit
+PS C:\Users\davi.barros> docker container ls -a
+CONTAINER ID   IMAGE           COMMAND   CREATED          STATUS                       PORTS     NAMES
+aa5335ce7c97   ubuntu-allumy   "sh"      21 seconds ago   Exited (0) 5 seconds ago               exercicioteste
+536ec2af7074   ubuntu          "sh"      23 minutes ago   Exited (127) 7 minutes ago             exercicio
+PS C:\Users\davi.barros>
+
